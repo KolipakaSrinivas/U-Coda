@@ -8,11 +8,19 @@
     <!-- Links -->
     <link rel="stylesheet" href="./root.css" />
     <link rel="stylesheet" href="./style.css" />
+    <!-- Goggle Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
       <nav id="navbar">
-        <img src="./public/icons/U-Coda.svg" alt="logo" />
+        <img src="./public/icons/icons8-menu.svg" alt="menu-berber" />
+        <img src="./public/icons/U-Coda.svg" alt="logo" class="logo" />
         <ul id="nav-links">
           <li><a href="#">Home</a></li>
           <li>
@@ -28,20 +36,20 @@
           <li><a href="#">Blog</a></li>
         </ul>
         <div id="signIn-FreeTril">
-          <li class="sign-in"><a href="#">Sign in</a></li>
-          <li class="freeTril"><a href="#">Free Trial</a></li>
+          <li id="sign-in"><a href="#">Sign in</a></li>
+          <li id="freeTril"><a href="#">Free Trial</a></li>
         </div>
       </nav>
-      <div id="container">
+      <div class="container">
         <div class="container-content">
-          <h1>Anytime,anywhereDevelop your skill by Online</h1>
-          <p>
+          <h1 class="heading">Anytime,anywhereDevelop your skill by Online</h1>
+          <p class="description">
             Online education is a form of education where students use their
             home computers through the internet. For many nontraditional
             students, among them all those who want to continue.
           </p>
           <div>
-            <button>All Courses</button>
+            <button class="primary-btn">All Courses</button>
             <div class="play-btns">
               <img src="./public/play-btn-1.svg" alt="" />
               <button>Play Video</button>
@@ -56,16 +64,36 @@
     <main>
       <div id="brands">
         <h2>Trusted by 30,000+ satisfied students</h2>
-        <img src="" alt="brand" class="brands" />
-        <img src="" alt="brand" class="brands" />
-        <img src="" alt="brand" class="brands" />
-        <img src="" alt="brand" class="brands" />
+        <div id="brands-logos">
+          <img
+            src="./public/brands/udemy-logo.png"
+            alt="brand"
+            class="brands"
+          />
+          <img
+            src="./public/brands/1_pO9ttF1Z_KTOre0yGiClxQ.png"
+            alt="brand"
+            class="brands"
+          />
+          <img
+            src="./public/brands/download 1.png"
+            alt="brand"
+            class="brands"
+          />
+          <img
+            src="./public/brands/microsoft_PNG4.png"
+            alt="brand"
+            class="brands"
+          />
+        </div>
       </div>
       <div class="container">
-        <div class="img-container"></div>
+        <div class="img-container">
+          <img src="./public/brands-section-img.png" alt="img" />
+        </div>
         <div class="container-content">
-          <h1>Get Started in 4 Easy Steps</h1>
-          <p>
+          <h1 class="heading">Get Started in 4 Easy Steps</h1>
+          <p class="description">
             Proper and good education is very important for all of us. It
             facilitates quality learning all through the life among people of
             any age group, cast, creed, religion and region. It is the process
@@ -80,7 +108,7 @@
         </div>
       </div>
     </main>
-    <section>
+    <section id="course-section">
       <h1>Our Popular Courses</h1>
       <div id="cards">
         <!-- card -->
@@ -92,24 +120,26 @@
             <h2>Modern Business|Best Online Courses</h2>
             <div class="video-info">
               <div class="video-link">
-                <a href="#"><img src="" alt="video" /></a>
+                <a href="#"
+                  ><img src="./public/play-btn-2.svg" alt="video"
+                /></a>
                 <p>30 Lectures</p>
               </div>
               <div class="vedio-review">
-                <img src="./public/play-btn-2.svg" alt="profil" />
+                <img src="./public/icons/person-icon.svg" alt="profil" />
                 <p>12k+Learners</p>
               </div>
             </div>
-            <hr style="background: rgba(38, 142, 170, 0.5)" />
+            <hr class="hr"/>
             <div class="video-creater">
-              <div>
+              <div class="video-creater-profil">
                 <img src="./public/video-create-1.png" alt="profil-pic" />
                 <div class="video-creater-info">
                   <h3>Jhon Smith</h3>
                   <a href="#">View Profile</a>
                 </div>
-                <h1>$100</h1>
               </div>
+              <h1>$100</h1>
             </div>
           </div>
         </div>
@@ -122,7 +152,9 @@
       <div id="review-cards">
         <!-- card -->
         <div class="review-card">
-          <img src="./public/review-img-1.png" alt="" />
+          <div class="review-card-img">
+            <img src="./public/review-img-1.png" alt="" />
+          </div>
           <p>
             The point of using Lorem Ipsum is that it has a more-or-less normal
             distribution of letters, as opposed to using 'Content here, content
@@ -135,7 +167,9 @@
         </div>
         <!-- card -->
         <div class="review-card">
-          <img src="./public/review-img-1.png" alt="" />
+          <div class="review-card-img">
+            <img src="./public/review-img-1.png" alt="" />
+          </div>
           <p>
             The point of using Lorem Ipsum is that it has a more-or-less normal
             distribution of letters, as opposed to using 'Content here, content
@@ -148,7 +182,9 @@
         </div>
         <!-- card -->
         <div class="review-card">
-          <img src="./public/review-img-1.png" alt="" />
+          <div class="review-card-img">
+            <img src="./public/review-img-1.png" alt="" />
+          </div>
           <p>
             The point of using Lorem Ipsum is that it has a more-or-less normal
             distribution of letters, as opposed to using 'Content here, content
@@ -162,13 +198,15 @@
         <!-- card -->
       </div>
     </article>
-    <footer id="footer">
-      <h1>Sign up & Enroll now,and Get Free Trial For 20Days</h1>
-      <div class="signUp-freeTrial">
-        <button class="Sign-up">Sign up</button>
-        <button class="Start-Free-Trial">Start Free Trial</button>
+    <footer>
+      <div id="footer">
+        <h1>Sign up & Enroll now,and Get Free Trial For 20Days</h1>
+        <div class="signUp-freeTrial">
+          <button class="Sign-up">Sign up</button>
+          <button class="Start-Free-Trial">Start Free Trial</button>
+        </div>
       </div>
-    </footer>
+      </footer>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
