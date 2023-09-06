@@ -120,7 +120,7 @@ li {
 
 main {
   background: #fff;
-  padding: 2rem;
+  /* padding: 2rem; */
   transition: 2s;
 }
 
@@ -155,6 +155,24 @@ main {
 
 /* course-section */
 
+#cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  transition: 2s;
+}
+
+#course-section-heading {
+  color: #242323;
+  font-family: Open Sans;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 74px; /* 127.586% */
+}
+
 #course-section {
   padding: 2rem;
   display: flex;
@@ -164,21 +182,42 @@ main {
   gap: 2rem;
 }
 
+#course-section button {
+  padding: 1.5rem 1.2rem;
+  border-radius: 5px;
+  background: #45b871;
+  box-shadow: 0px 10px 80px 0px rgba(9, 188, 77, 0.25);
+  color: #fff;
+  font-family: Open Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 15px; /* 75% */
+  align-self: center;
+}
+
 .card {
   background: #fff;
   stroke-width: 1px;
   stroke: #f2efef;
   filter: drop-shadow(0px 20px 100px rgba(87, 88, 89, 0.1));
-  width: 350px;
-  height: 495px;
+  width: 310px;
+  height: 440px;
+  border-radius: 1rem;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem 1rem 0rem 0rem;
 }
 
 .card-content {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  padding: 0.8rem;
   gap: 0.5rem;
-  padding-top: 3rem;
+  padding-top: 2rem;
 }
 
 .vedio-review,
@@ -200,6 +239,7 @@ main {
   display: flex;
   align-items: center;
   gap: 1rem;
+  justify-content: space-between;
 }
 
 .card-content h2 {
@@ -208,26 +248,24 @@ main {
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 600;
-  line-height: 2rem;
+  line-height: 1.7rem;
 }
 
 .video-link p {
   color: #575859;
   font-family: Open Sans;
-  font-size: 20px;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 600;
-  line-height: 15px; /* 75% */
 }
 
 .vedio-review p {
   color: #575859;
   text-align: center;
   font-family: Open Sans;
-  font-size: 18px;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 600;
-  line-height: 22px; /* 122.222% */
 }
 .video-creater-profil {
   display: flex;
@@ -235,10 +273,15 @@ main {
   gap: 1rem;
 }
 
+#play-btn-2 {
+  width: 2rem;
+  height: 2rem;
+  margin-top: 0.5rem;
+}
 .video-creater-profil img {
   background: #c4c4c4;
-  width: 68px;
-  height: 68px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
 }
 
@@ -261,7 +304,7 @@ main {
   text-decoration-line: underline;
 }
 
-.video-creater h1 {
+.card h1 {
   color: #4c68ff;
   font-family: Open Sans;
   font-size: 34px;
@@ -277,20 +320,25 @@ main {
 
 /* review section */
 
+#review-section-heading {
+  text-align: center;
+  color: #242323;
+  font-family: Open Sans;
+  font-size: 58px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 74px;
+}
+
 article {
   background: #fff;
   padding: 2rem;
   margin: 2rem auto;
-}
-
-article h1 {
-  color: #242323;
-  font-family: Open Sans;
-  font-size: 2rem;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 74px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:2rem;
 }
 
 div#review-cards {
@@ -301,14 +349,15 @@ div#review-cards {
 
 .review-card {
   border-radius: 15px;
-  border: 1px solid rgba(231, 231, 231, 0.7);
-  background: #fff;
-  box-shadow: 30px 30px 70px 0px rgba(99, 98, 98, 0.06);
+  border: 1px solid rgba(231, 231, 231, 0.70);
+  background: #FFF;
   display: flex;
   flex-direction: column;
   gap: 2rem;
   align-items: flex-start;
-  padding: 1rem;
+  padding: 2rem;
+  max-width: 634.33px;
+  max-height: 520px;
 }
 
 .review-card p {
@@ -359,12 +408,15 @@ footer {
 
 #footer {
   background: url(./public/footer-bg.png);
+  background-position: center;
   display: flex;
+  background-size: cover;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 3rem;
+  padding-block: 4rem;
   gap: 1rem;
+  margin-inline: 3rem;
 }
 
 .signUp-freeTrial {
@@ -395,7 +447,7 @@ footer {
   font-style: normal;
   font-weight: 600;
   line-height: 15px; /* 75% */
-  padding: 0.5rem 1rem;
+  padding: 1rem 1rem;
   margin-right: 1rem;
 }
 
@@ -408,7 +460,7 @@ footer {
   font-style: normal;
   font-weight: 600;
   line-height: 15px; /* 75% */
-  padding: 0.5rem 1rem;
+  padding: 1rem 1rem;
 }
 
 @media screen and (min-width: 851px) {
@@ -436,8 +488,8 @@ footer {
   }
 
   .heading {
-    font-size: 2rem;
-    line-height: 2.5rem;
+    font-size: 2.5rem;
+    line-height: 3rem;
     /* min-width: 18rem; */
   }
 
@@ -477,13 +529,11 @@ footer {
 
   /* main */
 
-  main {
-    padding: 3rem;
-  }
   #brands {
     flex-direction: row;
     gap: 3rem;
     justify-content: space-between;
+    padding: 3rem;
   }
 
   #brands h2 {
@@ -491,7 +541,17 @@ footer {
   }
 
   #brands-logos img {
-    width:10rem;
+    width: 10rem;
+  }
+
+  /* course-section */
+
+  #course-section {
+    align-items: flex-start;
+  }
+
+  #cards {
+    justify-content: space-around;
   }
 
   /* 1051px */
@@ -547,7 +607,13 @@ footer {
     padding: 0rem 2rem;
   }
 
+  /* main */
+
   #brands h2 {
     width: 10rem;
+  }
+
+  #main {
+    padding: 0rem 2rem;
   }
 }
