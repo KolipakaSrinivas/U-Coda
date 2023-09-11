@@ -4,6 +4,7 @@ header {
   transition: 2s;
 }
 
+
 #navbar {
   display: flex;
   align-items: center;
@@ -20,10 +21,10 @@ header {
 #signIn-FreeTril li a {
   font-size: 1rem;
 }
-#navbar .logo {
+.logo {
   margin-right: auto;
   margin-left: 1.2rem;
-  transition: 2s;
+  transition: all 3s;
 }
 
 #freeTril a {
@@ -36,13 +37,52 @@ header {
   font-style: normal;
   font-weight: 600;
   line-height: 14.872px; /* 75% */
+  transition: 2s;
 }
 
 #nav-links {
   display: none;
-  transition: 3s;
 }
 
+body.open #nav-links {
+  position: fixed;
+  transition: 3s;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  left: 0;
+  top: 0;
+}
+
+.btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.play-btns {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.play-btns img {
+  width: 70px;
+}
+
+
+/* ul#nav-links li a ,ul#nav-links li{
+  font-size: 1.5rem;
+  color:rgba(69, 184, 113, 1);
+} */
+
+/* color: #f2efef; */
 /* Container */
 .container {
   padding: 2rem;
@@ -55,7 +95,7 @@ header {
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  gap: 1.5em;
+  gap: 2.5em;
 }
 
 .container-content .primary-btn {
@@ -81,28 +121,28 @@ header {
 }
 
 .play-btns {
-  margin-top: 1rem;
+  margin-top: 0;
 }
 
 .heading {
   color: #242323;
   font-family: Open Sans;
-  font-size: 2rem;
+  font-size: 2.5rem;
   /* font-size: 63.454px; */
   font-style: normal;
   font-weight: 700;
-  line-height: 2.5rem;
+  line-height: 3rem;
   transition: 3ms;
 }
 
 .description {
   color: #6c6c6a;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-family: Open Sans;
   /* font-size: 18px; */
   font-style: normal;
   font-weight: 600;
-  line-height: 1.8rem;
+  line-height: 1.3rem;
   transition: 3ms;
 }
 
@@ -133,6 +173,7 @@ main {
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
+  padding: 2rem;
 }
 #brands-logos {
   align-items: center;
@@ -162,6 +203,7 @@ main {
   align-items: center;
   justify-content: center;
   transition: 2s;
+  padding: 3rem;
 }
 
 #course-section-heading {
@@ -357,7 +399,7 @@ div#review-cards {
   align-items: flex-start;
   padding: 2rem;
   max-width: 634.33px;
-  max-height: 520px;
+  max-height: 100%;
 }
 
 .review-card p {
@@ -463,6 +505,38 @@ footer {
   padding: 1rem 1rem;
 }
 
+/* 451px*/
+
+@media screen and (max-width:451px) {
+  /* nav */
+  #freeTril {
+    display: none;
+  }
+
+  #navbar {
+    justify-content: space-between;
+  }
+
+  #navbar .logo {
+    margin-left: auto;
+    margin-right: 0;
+    transition: ease-in;
+  }
+  
+}
+
+/* 500px*/
+
+@media screen and (max-width:501px) {
+  #sign-in {
+    display: none;
+  } 
+  
+}
+
+
+/* 851px */
+
 @media screen and (min-width: 851px) {
   /* Navbar */
 
@@ -501,7 +575,7 @@ footer {
 
   .btns {
     display: flex;
-    align-self: flex-start;
+    justify-content: flex-start;
   }
 
   .container-content .primary-btn {
@@ -548,11 +622,12 @@ footer {
 
   #course-section {
     align-items: flex-start;
+    
   }
 
-  #cards {
+  /* #cards {
     justify-content: space-around;
-  }
+  } */
 
   /* 1051px */
 
