@@ -1,9 +1,8 @@
 /* Nav */
 header {
   background: #e4f5eb;
-  transition: 2s;
+  /* transition: 5s; */
 }
-
 
 #navbar {
   display: flex;
@@ -24,7 +23,7 @@ header {
 .logo {
   margin-right: auto;
   margin-left: 1.2rem;
-  transition: all 3s;
+  /* transition: all 3s; */
 }
 
 #freeTril a {
@@ -40,11 +39,43 @@ header {
   transition: 2s;
 }
 
-#nav-links {
-  display: none;
+#menu-berber {
+  background: url(./public/icons/icons8-menu.svg);
+  background-size: cover;
+  height: 40px;
+  width: 40px;
+  z-index: 2;
+  cursor: pointer;
 }
 
-body.open #nav-links {
+#nav-links {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  left: 0;
+  top: 0;
+  gap: 2rem;
+  visibility: hidden;
+  opacity: 0;
+  padding-top: 6rem;
+  cursor: pointer;
+}
+
+.open header .container,
+.open #signIn-FreeTril {
+  transition: 2s;
+  filter: blur(10px);
+}
+
+.open .logo {
+  filter: blur(10px);
+}
+
+.open #nav-links {
   position: fixed;
   transition: 3s;
   width: 100%;
@@ -53,9 +84,22 @@ body.open #nav-links {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  visibility: visible;
+  opacity: 1;
   gap: 2rem;
   left: 0;
-  top: 0;
+  top: 10%;
+  z-index: 2;
+}
+
+.down-arrow {
+  display: inline-block;
+}
+
+.open #menu-berber {
+  background: url(./public/icons/icons8-close-30.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .btns {
@@ -75,7 +119,6 @@ body.open #nav-links {
 .play-btns img {
   width: 70px;
 }
-
 
 /* ul#nav-links li a ,ul#nav-links li{
   font-size: 1.5rem;
@@ -152,7 +195,7 @@ li {
   list-style: none;
   color: #575859;
   font-family: Open Sans;
-  font-size: 19.829px;
+  font-size: 1.1rem;
   font-style: normal;
   font-weight: 600;
   line-height: 14.872px;
@@ -380,7 +423,7 @@ article {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap:2rem;
+  gap: 2rem;
 }
 
 div#review-cards {
@@ -391,8 +434,8 @@ div#review-cards {
 
 .review-card {
   border-radius: 15px;
-  border: 1px solid rgba(231, 231, 231, 0.70);
-  background: #FFF;
+  border: 1px solid rgba(231, 231, 231, 0.7);
+  background: #fff;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -507,7 +550,7 @@ footer {
 
 /* 451px*/
 
-@media screen and (max-width:451px) {
+@media screen and (max-width: 451px) {
   /* nav */
   #freeTril {
     display: none;
@@ -522,18 +565,15 @@ footer {
     margin-right: 0;
     transition: ease-in;
   }
-  
 }
 
 /* 500px*/
 
-@media screen and (max-width:501px) {
+@media screen and (max-width: 501px) {
   #sign-in {
     display: none;
-  } 
-  
+  }
 }
-
 
 /* 851px */
 
@@ -542,6 +582,10 @@ footer {
 
   #navbar {
     padding: 2rem 3rem;
+  }
+
+  #menu-berber {
+    display: none;
   }
 
   /* Container */
@@ -622,55 +666,73 @@ footer {
 
   #course-section {
     align-items: flex-start;
-    
   }
 
   /* #cards {
     justify-content: space-around;
   } */
 
-  /* 1051px */
-
-  @media screen and (min-width: 1051px) {
-    /* Header */
-    header {
-      padding: 1rem 2rem;
-    }
+  #nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 0;
+    gap: 2rem;
+    cursor: pointer;
+    margin-right: 4rem;
+    position: static;
+    width: 0;
+    height: 0;
+    visibility: visible;
+    opacity: 1;
+    margin-right: auto;
   }
 
-  /* 1100px */
+  .down-arrow {
+    display: inline-block;
+  }
 
-  @media screen and (min-width: 1100px) {
-    /* Navbar */
+  #all-courses {
+    display: block ruby;
+  }
+}
 
-    #navbar {
-      justify-content: space-between;
-    }
+@media screen and (min-width: 1051px) {
+  /* Header */
+  header {
+    padding: 1rem 2rem;
+  }
+}
 
-    #menu-berber {
-      display: none;
-    }
+/* 1100px */
 
-    #nav-links {
-      display: flex;
-      gap: 4rem;
-      align-items: center;
-    }
+@media screen and (min-width: 1100px) {
+  /* Navbar */
 
-    .down-arrow {
-      display: inline-block;
-    }
+  #navbar {
+    justify-content: space-between;
+  }
 
-    #navbar .logo {
-      margin: 0;
-    }
+  #menu-berber {
+    display: none;
+  }
 
-    /* Haeder */
+  #nav-links {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+  }
 
-    .heading {
-      font-size: 2.5rem;
-      line-height: 3rem;
-    }
+  .down-arrow {
+    display: inline-block;
+  }
+
+  /* Haeder */
+
+  .heading {
+    font-size: 2.5rem;
+    line-height: 3rem;
   }
 }
 

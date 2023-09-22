@@ -19,19 +19,17 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+
+    <script src="./main.js" defer></script>
   </head>
   <body>
     <header>
       <nav id="navbar">
-        <img
-          src="./public/icons/icons8-menu.svg"
-          alt="menu-berber"
-          id="menu-berber"
-        />
+        <div id="menu-berber" onclick="toggleopen()"></div>
         <img src="./public/icons/U-Coda.svg" alt="logo" class="logo" />
         <ul id="nav-links">
           <li><a href="#">Home</a></li>
-          <li>
+          <li id="all-courses">
             All Courses
             <img
               src="./public/icons/down-arrow.svg"
@@ -399,6 +397,6 @@
         </div>
       </div>
     </footer>
-    <script type="module" src="/main.js"></script>
+    <!-- <script type="module" defer src="/main.js"></script> -->
   </body>
 </html>
