@@ -1,6 +1,32 @@
-function toggleopen() {
-  document.body.classList.toggle("open");
-}
+document.addEventListener("DOMContentLoaded", function () {
+
+  // Start auto-play on page load
+  autoPlay();
+
+  // Menu
+  document.querySelector("#menu-hamburger").addEventListener("click",function(){
+    document.body.classList.toggle("open");
+  });
+
+  // When scroll, close menu
+  document.addEventListener("scroll", function () {
+    document.body.classList.remove("open");
+  });
+
+   // When resize, close menu
+  window.addEventListener("resize", function () {
+    document.body.classList.remove("open");
+  });
+
+})
+
+document.querySelectorAll("a").forEach((element) => {
+  element.addEventListener("click", function () {
+    console.log("clicked");
+    document.body.classList.remove("open");
+  });
+});
+
 
 const carouselSlides = document.querySelector(".carousel-slides");
 const prevBtn = document.getElementById("prevBtn");
@@ -70,3 +96,14 @@ function autoPlay() {
 
 // Start auto-play on page load
 autoPlay();
+
+document.addEventListener("scroll", function () {
+  document.body.classList.remove("open");
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  window.addEventListener("resize", function () {
+    // Code to handle window resizing
+    document.body.classList.remove("open");
+  });
+});

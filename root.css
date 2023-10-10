@@ -19,6 +19,10 @@ dd {
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Remove default padding and margin*/
 
 ul,
