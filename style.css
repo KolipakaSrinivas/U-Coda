@@ -117,7 +117,7 @@ header {
 }
 
 .open #menu-hamburger {
-  background: url(./public/icons/icons8-close-30.png);
+  background: url(./public/icons/icons8-close.svg);
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 10;
@@ -611,7 +611,7 @@ footer {
 }
 
 #footer {
-  background: url(./public/footer-bg.png);
+  background: url(./public/Images/footer.svg);
   background-position: center;
   display: flex;
   background-size: cover;
